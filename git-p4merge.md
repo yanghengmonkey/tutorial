@@ -6,7 +6,12 @@
 
 2. Copy  extracted p4merge download to /opt/merge
 
-   ```sudo mv * /opt/p4merge```
+   ```
+   ~/Downloads/p4v/p4v-2018.2.1666551$ ls
+   bin  lib
+   ~/Downloads/p4v/p4v-2018.2.1666551$ sudo mkdir -p /opt/p4merge
+   ~/Downloads/p4v/p4v-2018.2.1666551$ sudo mv * /opt/p4merge
+   ```
 
 3. Symlink p4merge
 
@@ -14,7 +19,7 @@
 
 4. Add this to your ~/.gitconfig
 
-   ```
+```
     [merge]
         keepBackup = false;
         tool = p4merge
@@ -36,10 +41,11 @@
         trustExitCode = false
         keepBackup = false
         path = /usr/local/bin/p4merge
-   ```
+```
 
 5. Check changes/conflicts by command:
 
    ```git difftool```
 
    ```git mergetool```
+
